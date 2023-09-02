@@ -1,22 +1,19 @@
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-// import { ThemeProvider } from './context/ThemeContext'; 
+// src/App.js
 import { ThemeProvider } from 'styled-components';
-
-
-import Home from "./pages/home";
-import { useTheme } from './context/ThemeContext';
+import { Button, CssBaseline } from '@mui/material';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
+import { lightTheme } from './Theme';
+import Header from './components/Header';
 
 function App() {
-
-  const { theme } = useTheme();
-
   return (
-    <ThemeProvider theme={theme}>
-      <h1>Athena</h1>
-      <Header />
-      <Sidebar />
-      <Home />
+    <ThemeProvider theme={lightTheme}>
+      <MuiThemeProvider theme={lightTheme}>
+        <CssBaseline />
+        <Header/>
+        <Button variant='outlined' >Hello! I'm a button</Button>
+
+      </MuiThemeProvider>
     </ThemeProvider>
   );
 }
