@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import { IColors } from './interfaces/ITheme';
 
 export const defaultColors = {
     // Default Colors
@@ -34,11 +35,11 @@ export const defaultColors = {
 
     // Topbar Colors
     topbarLogo: '#fff',
-    topbarPrimaryBackground: '#007bff',
+    topbarPrimaryBackground: '#FFF',
     topbarPrimaryContrast: '#fff',
     topbarSecondaryBackground: '#6c757d',
     topbarSecondaryContrast: '#fff',
-    topbarActivedMenuItemContrast: '#007bff',
+    topbarActivedMenuItemContrast: '#FFF',
     topbarActivedMenuItemText: '#fff',
     topbarInputBackground: '#fff',
     topbarInputBorder: '#ccc',
@@ -46,6 +47,14 @@ export const defaultColors = {
     topbarInput: '#555',
 };
 
+const defaultDarkColors: IColors = {
+    ...defaultColors,
+    primary: '#3498db',
+    secondary: '#34495e',
+    body: '#222',
+    bodyContrast: '#fff',
+  };
+  
 const lightTheme = createTheme({
     palette: {
         primary: {
@@ -80,27 +89,27 @@ const lightTheme = createTheme({
 const darkTheme = createTheme({
     palette: {
         primary: {
-            main: defaultColors.primary,
+            main: defaultDarkColors.primary,
         },
         secondary: {
-            main: defaultColors.secondary,
+            main: defaultDarkColors.secondary,
         },
         error: {
-            main: defaultColors.error,
+            main: defaultDarkColors.error,
         },
         warning: {
-            main: defaultColors.warning,
+            main: defaultDarkColors.warning,
         },
         text: {
-            primary: defaultColors.pageTitle,
-            secondary: defaultColors.lightText,
+            primary: defaultDarkColors.pageTitle,
+            secondary: defaultDarkColors.lightText,
         },
         background: {
-            default: defaultColors.body,
-            paper: defaultColors.body,
+            default: defaultDarkColors.body,
+            paper: defaultDarkColors.body,
         },
         action: {
-            active: defaultColors.primaryHighlightText,
+            active: defaultDarkColors.primaryHighlightText,
         },
         mode: 'dark',
     },
