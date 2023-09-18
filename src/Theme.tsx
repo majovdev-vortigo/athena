@@ -3,7 +3,7 @@ import { IColors } from './interfaces/ITheme';
 
 export const defaultColors = {
     // Default Colors
-    primary: '#007bff',
+    primary: '#009E61',
     secondary: '#6c757d',
     error: '#ff0000',
     warning: '#ffc107',
@@ -49,7 +49,7 @@ export const defaultColors = {
 
 const defaultDarkColors: IColors = {
     ...defaultColors,
-    primary: '#3498db',
+    // primary: '#3498db',
     secondary: '#34495e',
     body: '#222',
     bodyContrast: '#fff',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Drawer, List, ListItem, ListItemText } from '@mui/material';
 
 function Sidebar() {
@@ -15,13 +15,13 @@ function Sidebar() {
       <Drawer anchor="left" open={isOpen} onClose={toggleDrawer(false)}>
         <List>
           <ListItem button onClick={toggleDrawer(false)}>
-            <ListItemText primary="Item 1" />
+            <ListItemText primary="Item 1Item 1Item 1" />
           </ListItem>
           <ListItem button onClick={toggleDrawer(false)}>
-            <ListItemText primary="Item 2" />
+            <ListItemText primary="Item 2Item 2Item 2" />
           </ListItem>
           <ListItem button onClick={toggleDrawer(false)}>
-            <ListItemText primary="Item 3" />
+            <ListItemText primary="Item 3Item 3Item 3" />
           </ListItem>
         </List>
       </Drawer>
